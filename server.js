@@ -11,7 +11,7 @@
 //         req.respond({status:404, body:"Not Found"});
 //     }
 // }
-Deno.serve(async req => {
+Deno.serve(async _req => {
     const file = await Deno.open("./index.html");
     return new Response(file.readable, {
         headers: {
